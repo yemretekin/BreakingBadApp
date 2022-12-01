@@ -8,9 +8,8 @@
 import UIKit
 
 class EpisodeViewController: BaseViewController {
-    var openPopUp : EpisodeView!
+    var viewPopUp : EpisodeView!
     var selectedEpisode: EpisodeModel?
-    
     
     @IBOutlet weak var tableView: UITableView!{
         didSet{
@@ -37,10 +36,10 @@ class EpisodeViewController: BaseViewController {
             self.indicator.stopAnimating()
             
         }
+        
     }
     
 }
-
 
 extension EpisodeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,18 +62,11 @@ extension EpisodeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.openPopUp = EpisodeView(frame: CGRect(origin: CGPointMake(view.center.x - 125, view.center.y - 125), size: CGSize(width: 250, height: 250)))
-        self.view.addSubview(openPopUp)
         
-        let model = episodes?[indexPath.row]
-        
-        Client.getEpisodeActor(episodeID:model?.episode_id  ?? 0 ){[weak self] episodesActor, error in
-            guard let self = self else { return }
-            self.episodesActor = episodesActor
-            print(episodesActor)
-            self.indicator.stopAnimating()
-        }
-
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.viewPopUp = EpisodeView(frame: CGRect(origin: CGPointMake(view.center.x - 125, view.center.y - 125), size: CGSize(width: 250, height: 250)))
+        self.view.addSubview(viewPopUp)
+        self.viewPopUp.characterArray = episodes?[indexPath.row].characters ?? []
     }
     
     
