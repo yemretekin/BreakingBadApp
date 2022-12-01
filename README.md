@@ -1,40 +1,19 @@
-# fourth-week-homework
+# Breaking Bad App
 
-1- https://breakingbadapi.com/  API kullanılarak bir uygulama geliştirilecektir. Aşağıda detaylar verilmiştir.
---
+Application that pulls Breaking Bad data with API and displays this data on various screens on the application.
 
-• Uygulama tablı yapıda olacaktır.(Açılış tabbar) ve 3 ayrı tab olacaktır.
-• Activity indicator kullanılmalıdır.
-• Alert gösterimi yapılmalıdır.
+## Third-Party Libraries
+Kingfisher
 
-## 1.Tab - Karakterler:
+SwiftAlertView
 
-• Bu ekranda karakterler listelenecektir.
-• CollectionViewda en az karakterin ismi, doğum günü ve takma adı olacaktır.
-• Listeden karaktere bastığımda karakter detay ekranına yönlenmelidir.
+MaterialActivityIndicator
 
-Karakter Detay Ekranı:
 
-• Karakterin görseli ile birlikte en az 4 bilgisi yer almalıdır.
-• Ekranda bir button olmalı ve bu button karakterin sözleri(alıntıları) ekranına yönlenmelidir.
+## Screenshots
 
-Karakterin Sözleri-Alıntıları Ekranı:
-
-• Ekranda karakterin sözleri-alıntıları listelenmelidir.
-
-## 2.Tab - Bölümler:
-
-• Ekranda bölümler listelenmelidir.
-• TableViewda en az ismi ve sezonu bulunmalıdır.
-• Listeden bölüme bastığımda ekranın üstünde bir detay view açılmalıdır.(ViewController değil View olacak).
-• View üzerinde bölümdeki oyuncular yer almalı sağ üst köşede kapat butonu olmalı.
-• Kapat butonu aksiyonu delegate ile yönetilebilmelidir.(Kapata bastığımda liste ekranında print yazılması yeterlidir.)
-
-## 3.Tab- IMDB Sayfası
- 
-• Ekranda Webview ile IMDBde dizinin sayfası açılmalıdır.
-
-2- Clean Code - 1, 2, 3, 4 chapterlar özetlenmelidir.
---
-
-Kolay gelsin :)
+<img src="https://user-images.githubusercontent.com/43580854/204161270-61cb2c61-1706-4fa8-be80-4c16f12a5c7e.png" width="200" height="406" />
+<img src="https://user-images.githubusercontent.com/43580854/204161315-4d4bf26a-22e5-42ac-8e3e-c97e2835aba4.png" width="200" height="406" />
+<img src="https://user-images.githubusercontent.com/43580854/204161320-7684adbf-90b7-457f-a95f-65395f3c4a1d.png" width="200" height="406" />
+<img src="https://user-images.githubusercontent.com/43580854/204161324-8fc26197-2473-42d7-854e-1e5143b72389.png" width="200" height="406" />
+<img src="https://user-images.githubusercontent.com/43580854/204161327-c68e90ef-ffcd-40ff-9a49-eebfd3d8d21b.png" width="200" height="406" />
